@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio with Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a Computer Science student with expertise in AI and cloud technologies. I enjoy developing innovative solutions using modern technology.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li>Neural Style Transfer - AI-powered image transformation using deep learning.</li>
+            <li>Diabetes Analysis - Data analysis and predictive modeling using Python.</li>
+        </ul>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Python, NLTK, spaCy</li>
+            <li>AWS Cloud Architecture</li>
+            <li>Machine Learning & Deep Learning</li>
+        </ul>
+    </section>
+
+    <section id="resume">
+        <h2>Resume</h2>
+        <p><a href="resume.pdf" target="_blank">Download Resume</a></p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: example@example.com</p>
+    </section>
+
+    <!-- Chatbot Section -->
+    <section id="chatbot">
+        <h2>Chat with Me</h2>
+        <div class="chat-container">
+            <div id="chatbox"></div>
+            <input type="text" id="userInput" placeholder="Type your message here...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
